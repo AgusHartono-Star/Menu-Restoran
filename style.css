@@ -1,10 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f8f8;
-}
-
+/* Header */
 header {
   background-color: #d35400;
   color: white;
@@ -12,61 +6,73 @@ header {
   text-align: center;
 }
 
-/* Navigasi scrollable */
+/* Navigasi Scrollable */
 .nav-container {
   overflow-x: auto;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
   background-color: #f39c12;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
-.nav-container::-webkit-scrollbar {
-  display: none; /* Sembunyikan scrollbar di HP */
-}
-
-.nav-container nav {
+nav {
   display: inline-flex;
-  width: max-content; /* Penting agar scroll horizontal muncul */
+  min-width: max-content;
 }
 
-.nav-container nav a {
+nav a {
   display: inline-block;
-  padding: 10px 20px;
-  white-space: nowrap;
   color: white;
   text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 0;
   font-weight: bold;
+  white-space: nowrap;
 }
 
+/* Section umum */
 section {
   padding: 20px;
 }
 
+/* Untuk menu makanan dan lainnya */
 .menu-item {
-  background-color: white;
-  padding: 15px;
-  margin: 10px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fdf2e9;
 }
 
-.menu-item h3 {
-  margin: 0 0 10px;
+.menu-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.menu-item p {
-  margin: 0;
-}
-
+/* Untuk footer atau bagian bawah */
 footer {
-  background-color: #333;
+  background-color: #d35400;
   color: white;
   text-align: center;
   padding: 15px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  margin-top: 30px;
 }
+
+/* Responsive fallback untuk layar kecil */
+@media screen and (max-width: 600px) {
+  nav a {
+    margin: 0 10px;
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+}
+
 
 
 
