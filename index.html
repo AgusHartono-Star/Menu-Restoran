@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Restoran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: #d35400;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f39c12;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .menu-item {
+      background-color: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item h3 {
+      margin: 0 0 10px;
+    }
+
+    .menu-item p {
+      margin: 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Menu Restoran</h1>
+    <p>Selamat datang di Restoran Kami!</p>
+  </header>
+
+  <nav>
+    <a href="#makanan">Makanan</a>
+    <a href="#minuman">Minuman</a>
+    <a href="#pembayaran">Pembayaran</a>
+    <a href="#tentang">Tentang</a>
+  </nav>
+
+  <section id="makanan">
+    <h2>Makanan</h2>
+    <div class="menu-item">
+      <h3>Nasi Goreng</h3>
+      <p>Rp 20.000 - Nasi goreng spesial dengan telur dan ayam.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Mie Goreng</h3>
+      <p>Rp 18.000 - Mie goreng lezat dengan sayuran segar.</p>
+    </div>
+  </section>
+
+  <section id="minuman">
+    <h2>Minuman</h2>
+    <div class="menu-item">
+      <h3>Es Teh Manis</h3>
+      <p>Rp 5.000 - Teh manis dingin menyegarkan.</p>
+    </div>
+    <div class="menu-item">
+      <h3>Jus Jeruk</h3>
+      <p>Rp 10.000 - Jus jeruk segar alami.</p>
+    </div>
+  </section>
+
+  <section id="pembayaran">
+    <h2>Pembayaran</h2>
+    <p>Silakan lakukan pembayaran melalui kasir atau metode digital seperti QRIS dan transfer bank. Terima kasih atas kunjungan Anda!</p>
+  </section>
+
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p>Kami adalah restoran yang menyediakan makanan dan minuman terbaik untuk Anda. Kualitas dan kepuasan pelanggan adalah prioritas kami.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Restoran Kita</p>
+  </footer>
+
+  <script>
+    // Tambahan efek scroll smooth
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
