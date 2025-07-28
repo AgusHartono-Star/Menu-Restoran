@@ -15,8 +15,7 @@ header {
 nav {
   background-color: #f39c12;
   padding: 10px;
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
 }
 
 nav a {
