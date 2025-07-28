@@ -12,16 +12,29 @@ header {
   text-align: center;
 }
 
-nav {
+/* Navigasi scrollable */
+.nav-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
   background-color: #f39c12;
-  padding: 10px;
-  display: inline-flex;
 }
 
-nav a {
+.nav-container::-webkit-scrollbar {
+  display: none; /* Sembunyikan scrollbar di HP */
+}
+
+.nav-container nav {
+  display: inline-flex;
+  width: max-content; /* Penting agar scroll horizontal muncul */
+}
+
+.nav-container nav a {
+  display: inline-block;
+  padding: 10px 20px;
+  white-space: nowrap;
   color: white;
   text-decoration: none;
-  margin: 0 15px;
   font-weight: bold;
 }
 
@@ -54,30 +67,7 @@ footer {
   width: 100%;
   bottom: 0;
 }
-.nav-container {
-  overflow-x: auto;
-  white-space: nowrap;
-}
 
-.nav-container nav {
-  display: inline-flex;
-}
-
-.nav-container nav a {
-  display: inline-block;
-  padding: 10px 20px;
-  white-space: nowrap;
-}
-
-.nav-container {
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-
-.nav-container::-webkit-scrollbar {
-  display: none; /* sembunyikan scrollbar di HP */
-}
 
 
 
