@@ -69,8 +69,15 @@ footer {
   white-space: nowrap;
 }
 
-/* Optional: Sembunyikan scrollbar di HP */
-.nav-container::-webkit-scrollbar {
-  display: none;
+.nav-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
+
+.nav-container::-webkit-scrollbar {
+  display: none; /* sembunyikan scrollbar di HP */
+}
+
+
 
